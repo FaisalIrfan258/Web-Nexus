@@ -7,15 +7,14 @@ const {
   deleteGalleryImage,
   uploadMiddleware 
 } = require('../controllers/galleryController');
-const { protect } = require('../middlewares/authMiddleware');
 
 // Get all gallery images
-router.get('/', protect, getGalleryImages);
+router.get('/',  getGalleryImages);
 
 // Upload a new image
-router.post('/upload', protect, uploadMiddleware, uploadImage);
+router.post('/upload',  uploadMiddleware, uploadImage);
 
 // Delete a gallery image
-router.delete('/:id', protect, deleteGalleryImage);
+router.delete('/:id',  deleteGalleryImage);
 
 module.exports = router;
