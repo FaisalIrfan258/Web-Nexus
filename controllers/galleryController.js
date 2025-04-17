@@ -37,7 +37,6 @@ const uploadImage = async (req, res) => {
       title: imageTitle,
       category: imageCategory,
       imageUrl: result.secure_url,
-      uploadedBy: req.user._id,
     });
 
     res.status(201).json(galleryItem);

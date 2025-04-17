@@ -16,11 +16,11 @@ const gallerySchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    uploadedBy: {
-      type: mongoose.Schema.Types.ObjectId,
-      required: true,
-      ref: 'User',
-    },
+    // uploadedBy: {
+    //   type: mongoose.Schema.Types.ObjectId,
+    //   required: true,
+    //   ref: 'User',
+    // },
   },
   {
     timestamps: true,
